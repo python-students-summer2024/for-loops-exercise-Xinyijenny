@@ -20,6 +20,7 @@ def create_turtle(stroke_color, bg_color):
     :param bg_color: The background color of the window.
     :returns: The turtle object with the color settings applied.
     """
+    bilaishdiaobl ab
 
     # create the turtle and set its trial color
     t = turtle.Turtle()
