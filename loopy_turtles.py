@@ -20,7 +20,6 @@ def create_turtle(stroke_color, bg_color):
     :param bg_color: The background color of the window.
     :returns: The turtle object with the color settings applied.
     """
-    bilaishdiaobl ab
 
     # create the turtle and set its trial color
     t = turtle.Turtle()
@@ -79,6 +78,26 @@ def draw_square(t, start_x, start_y, length, rotation_direction, fill_color):
     :param rotation_direction: Either 'left' or 'right', indicating the direction the turtle should rotate after it completes each line of the rectangle.
     :param fill_color: The color with which to fill in the area drawn by the turtle.
     """
+    pick_up_and_move_turtle(t, start_x, start_y)
+    t.fillcolor(fill_color)
+    t.begin_fill()
+    for i in range(4):
+        print_turtle_position(t)
+        t.forward(length)
+        if rotation_direction == "left":
+            t.left(90)
+        elif rotation_direction == "right":
+            t.right(90)
+    t.end_fill()
+    
+    
+    
+
+
+        
+
+
+
 
 
 def draw_star(
@@ -101,3 +120,35 @@ def draw_star(
     :param initial_rotation_direction: The direction of the first rotation the turtle should make when drawing each point, either 'left' or 'right'.
     :param fill_color: The color with which to fill in the area drawn by the turtle.
     """
+    pick_up_and_move_turtle(t, start_x, start_y)
+    t.fillcolor(fill_color)
+    t.begin_fill()
+    direction = initial_rotation_direction
+    for i in range(5):
+        print_turtle_position(t)
+        t.forward(length)
+        if initial_rotation_direction == "left":
+            t.left(angle)
+            t.forward(length)
+            t.right(angle-72)
+        else:
+            t.right(angle)
+            t.forward(length)
+            t.left(angle-72)
+
+            #another attemption in range(10)
+        #t.forward(length)
+        #if direction == "left":
+            #if direction == initial_rotation_direction:
+                #t.left(angle)
+            #else:
+                #t.left(angle-72)
+            #direction = "right"
+        #else:
+            #if direction == initial_rotation_direction:
+                #t.right(angle)
+            #else:
+                #t.right(angle-72)
+            #direction = "left"
+        
+    t.end_fill()

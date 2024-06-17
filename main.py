@@ -25,10 +25,10 @@ print(
 # ask the user to guess a number between 1 and 10... give them 5 attempts
 from number_guessing import guess_number
 
-if guess_number(1, 10, 5):
-    print("You guessed correctly!")  # they guessed correctly!
-else:
-    print("Sorry, all your guesses were incorrect!")  # they guessed incorrectly!
+#if guess_number(1, 10, 5):
+    #print("You guessed correctly!")  # they guessed correctly!
+#else:
+    #print("Sorry, all your guesses were incorrect!")  # they guessed incorrectly!
 
 
 # #### FOR LOOPING TURTLES ####
